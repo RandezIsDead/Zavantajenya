@@ -15,4 +15,12 @@
     <string name="_00000000000000">00000000000000</string>
     <string name="where_to_find">Where to see</string>
     <string name="wtf"><u>ticket and road number?</u></string>
+    <string name="bort_journal">Бортовой журнал</string>
+    <string name="transl">Переводчик</string>
+    <string name="bon">РЖД Бонус</string>
+    <string name="banc">Курс ЦБ на</string>
+    <string name="rfw">Россия из окна поезда</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="audiobooks">Аудиокниги</string>
+    <string name="cinema">Кинотеатр</string>
 </resources>

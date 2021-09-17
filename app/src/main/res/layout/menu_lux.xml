@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="210dp"
-    android:paddingTop="10dp">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
         android:id="@+id/pipe"
@@ -13,7 +12,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_toStartOf="@id/pipe"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="5dp">
@@ -22,26 +21,28 @@
             android:id="@+id/journal"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:src="@drawable/rzd"
-            android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:src="@drawable/audio_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFF"
             android:textSize="20sp"
             android:layout_marginStart="5dp"
             android:layout_marginBottom="10dp"
             android:layout_alignParentBottom="true"
-            android:text="@string/bort_journal" />
+            android:text="@string/audiobooks" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            tools:srcCompat="@tools:sample/avatars"
+            android:src="@drawable/audiobook"
             android:layout_above="@id/textView6"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/todo" />
@@ -50,7 +51,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_toEndOf="@id/pipe"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="5dp"
@@ -60,9 +61,12 @@
             android:id="@+id/translator"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:src="@drawable/rzd"
+            android:src="@drawable/cinema_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
             android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView7"
@@ -73,16 +77,17 @@
             android:layout_marginStart="5dp"
             android:layout_marginBottom="10dp"
             android:layout_alignParentBottom="true"
-            android:text="@string/transl" />
+            android:text="@string/cinema" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            tools:srcCompat="@tools:sample/avatars"
+            android:src="@drawable/video"
             android:layout_above="@id/textView7"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/todo" />
 
     </RelativeLayout>
+
 </RelativeLayout>
