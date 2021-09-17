@@ -22,7 +22,8 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void changeScreen() {
-        if (Prefs.read(getApplicationContext(), "loggedIn").equals("true")) {
+        System.out.println(Prefs.read(getApplicationContext(), "loggedIn"));
+        if (Prefs.read(getApplicationContext(), "loggedIn") == null) {
             startActivity(new Intent(getApplicationContext(), AuthActivity.class));
         } else {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
