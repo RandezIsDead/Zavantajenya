@@ -38,7 +38,41 @@
             android:layout_height="50dp"
             android:layout_toEndOf="@id/by_pass"
             android:background="@drawable/auth_method_button_right_white"
-            android:text="@string/by_ticket" />
+            android:text="@string/by_ticket"
+            android:textColor="#000"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/log_by_pass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_method"
+        android:layout_marginTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4"
+            android:textColor="#6A6A6A"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="@string/_00_00"
+            android:inputType="text"
+            android:textAlignment="center" />
+
 
     </RelativeLayout>
 </RelativeLayout>

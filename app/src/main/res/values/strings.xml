@@ -2,6 +2,8 @@
     <string name="app_name">Попутчик</string>
     <string name="todo">TODO</string>
     <string name="av_auth_method">Доступный способ авторизации</string>
-    <string name="by_pass">По пасспорту</string>
+    <string name="by_pass">По паспорту</string>
     <string name="by_ticket">По билету</string>
+    <string name="_4">Последние 4 цифры номера паспорта</string>
+    <string name="_00_00">00 00</string>
 </resources>
