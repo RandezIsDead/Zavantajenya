@@ -1,16 +1,29 @@
 package com.mr_trying.companion.Adapters;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.mr_trying.companion.R;
+
 public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHoder> {
+
+    private final Context context;
+
+    public MainMenuAdapter(Context context) {
+        this.context = context;
+    }
+
     @NonNull
     @Override
     public ViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        if (viewType == 0) return new ViewHoder(LayoutInflater.from(context).inflate(R.layout.menu_vertical_pt1, parent, false));
+        else return new ViewHoder(LayoutInflater.from(context).inflate(R.layout.menu_vertical_pt2, parent, false));
     }
 
     @Override
@@ -20,7 +33,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 2;
     }
 
     @Override
@@ -30,6 +43,9 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
     }
 
     public static class ViewHoder extends RecyclerView.ViewHolder {
+
+        public ImageView journal;
+        public ImageView translator;
         public ViewHoder(@NonNull View itemView) {
             super(itemView);
         }

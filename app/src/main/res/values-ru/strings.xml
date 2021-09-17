@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Попутчик</string>
+    <string name="todo">TODO</string>
+    <string name="av_auth_method">Доступный способ авторизации</string>
+    <string name="by_pass">По паспорту</string>
+    <string name="by_ticket">По билету</string>
+    <string name="_4">Последние 4 цифры номера паспорта</string>
+    <string name="_00_00">00 00</string>
+    <string name="_00">00</string>
+    <string name="place">Место</string>
+    <string name="vagon">Вагон</string>
+    <string name="_000">000</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="ticket_number">Билет №</string>
+    <string name="_00000000000000">00000000000000</string>
+    <string name="where_to_find">Где посмотреть</string>
+    <string name="wtf"><u>номер билета и дороги?</u></string>
+</resources>
