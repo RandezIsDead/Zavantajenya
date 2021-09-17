@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.mr_trying.companion.Activities.SecondaryActivities.BasketActivity;
+import com.mr_trying.companion.Activities.SecondaryActivities.FeedbackActivity;
 import com.mr_trying.companion.Adapters.MainMenuAdapter;
 import com.mr_trying.companion.R;
 
@@ -40,12 +42,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        RelativeLayout toVip = findViewById(R.id.r1);
-        RelativeLayout feedback = findViewById(R.id.r2);
+        RelativeLayout basket = findViewById(R.id.r1);
+        RelativeLayout toVip = findViewById(R.id.r2);
+        RelativeLayout feedback = findViewById(R.id.r3);
 
+        basket.setOnClickListener(v -> {
+            moreRel.setVisibility(View.GONE);
+            startActivity(new Intent(getApplicationContext(), BasketActivity.class));
+            overridePendingTransition(0, 0);
+        });
         toVip.setOnClickListener(v -> {
             moreRel.setVisibility(View.GONE);
             startActivity(new Intent(getApplicationContext(), LuxActivity.class));
+            overridePendingTransition(0, 0);
+        });
+        feedback.setOnClickListener(v -> {
+            moreRel.setVisibility(View.GONE);
+            startActivity(new Intent(getApplicationContext(), FeedbackActivity.class));
             overridePendingTransition(0, 0);
         });
     }

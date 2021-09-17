@@ -19,6 +19,7 @@
     <string name="bort_journal">Бортовой журнал</string>
     <string name="transl">Переводчик</string>
     <string name="bon">РЖД Бонус</string>
+    <string name="banc">Курс ЦБ на</string>
     <string name="rfw">Россия из окна поезда</string>
     <string name="feedback">Обратная связь</string>
     <string name="audiobooks">Аудиокниги</string>
@@ -31,4 +32,8 @@
     <string name="shop_on_board">Магазин на борту</string>
     <string name="restoraunt">Ресторан</string>
     <string name="for_lux">Для Люкс пассажиров</string>
+    <string name="cart">Корзина</string>
+    <string name="english">English</string>
+    <string name="russian">Russian</string>
+    <string name="translate">Translate</string>
 </resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/close"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/rzd" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imageView2"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            android:textColor="#444"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/imageView2"
+            android:background="#999"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/swap"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/ic_baseline_repeat_24" />
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/swap"
+        android:layout_centerVertical="true"
+        android:background="#EEE">
+
+        <TextView
+            android:id="@+id/lang1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/english"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:background="#DDD"/>
+
+        <EditText
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/lang1"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/swap"
+        android:layout_centerVertical="true"
+        android:background="#EEE">
+
+        <TextView
+            android:id="@+id/lang2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/russian"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:background="#DDD"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_below="@id/lang2" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnTranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rel1"
+        android:layout_marginTop="10dp"
+        android:text="@string/translate" />
+
+</RelativeLayout>

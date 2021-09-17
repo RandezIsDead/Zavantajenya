@@ -12,10 +12,20 @@
         <entry key="app/src/main/res/drawable/et_bg.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/ic_baseline_repeat_24.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/more_bg.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.296875" />
+        <entry key="app/src/main/res/layout/activity_basket.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_feedback.xml" value="0.340625" />
+        <entry key="app/src/main/res/layout/activity_journal.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_lux.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_rec_view.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_shop.xml" value="0.1828125" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.340625" />
+        <entry key="app/src/main/res/layout/activity_translation.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_web.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/goods_item.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/menu_lux.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/menu_vertical_pt1.xml" value="0.5" />
         <entry key="app/src/main/res/layout/menu_vertical_pt2.xml" value="0.19791666666666666" />

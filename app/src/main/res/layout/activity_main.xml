@@ -70,6 +70,33 @@
             android:layout_marginEnd="10dp">
 
             <ImageView
+                android:id="@+id/imageView5f"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/shopping_basket"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:id="@+id/textView12f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imageView5f"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:textColor="#444"
+                android:text="@string/cart"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/r1">
+
+            <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -88,10 +115,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/r2"
+            android:id="@+id/r3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/r1"
+            android:layout_below="@id/r2"
             android:layout_marginTop="5dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">

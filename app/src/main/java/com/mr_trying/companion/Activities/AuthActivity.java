@@ -82,7 +82,6 @@ public class AuthActivity extends AppCompatActivity {
     private void logIn(View v, String pass, String vagon, String seat, String ticket) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_LOGIN,
                 response -> {
-                    System.out.println(response);
                     if (response.equals("allowed")) {
                         Prefs.write(getApplicationContext(), "loggedIn", "true");
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));

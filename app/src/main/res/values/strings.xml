@@ -31,4 +31,8 @@
     <string name="shop_on_board">Магазин на борту</string>
     <string name="restoraunt">Ресторан</string>
     <string name="for_lux">Для Люкс пассажиров</string>
+    <string name="cart">Корзина</string>
+    <string name="english">English</string>
+    <string name="russian">Russian</string>
+    <string name="translate">Translate</string>
 </resources>

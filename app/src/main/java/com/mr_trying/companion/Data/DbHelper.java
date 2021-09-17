@@ -1,62 +1,62 @@
 package com.mr_trying.companion.Data;
 
+import android.content.Context;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.Request;
+import com.android.volley.toolbox.StringRequest;
+import com.mr_trying.companion.Adapters.ItemAdapter;
+import com.mr_trying.companion.Models.Item;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class DbHelper {
-//
-//    public static void sendData(Context context, String from, String to, String keyWord, String data) {
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_SEND_DATA,
-//                System.out::println,
-//                System.out::println)
-//        {
-//            @Override
-//            protected Map<String, String> getParams() {
-//                Map<String, String> params = new HashMap<>();
-//                params.put("from", from);
-//                params.put("to", to);
-//                params.put("keyWord", keyWord);
-//                params.put("data", data);
-//
-//                return params;
-//            }
-//        };
-//
-//        RequestHandler.getInstance(context).addToRequestQueue(stringRequest);
-//    }
-//
-//    public static void deleteA_D(Context context, String param, String id) {
-//        String url;
-//        if (param.equals("ask")) url = Constants.URL_DELETE_ASK;
-//        else url = Constants.URL_DELETE_DATA;
-//
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-//                System.out::println,
-//                System.out::println){
-//            @Override
-//            protected Map<String, String> getParams() {
-//                Map<String, String> params = new HashMap<>();
-//                params.put("id", id);
-//                return params;
-//            }
-//        };
-//
-//        RequestHandler.getInstance(context).addToRequestQueue(stringRequest);
-//    }
-//
-//    public static void updateGroupChat(Context context, GroupChat groupChat) {
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_UPDATE_GROUP_CHAT,
-//                System.out::println,
-//                System.out::println)
-//        {
-//            @Override
-//            protected Map<String, String> getParams() {
-//                Map<String, String> params = new HashMap<>();
-//                params.put("id", groupChat.getChatID());
-//                params.put("imageEncode", groupChat.getImgUrl());
-//                params.put("name", groupChat.getName());
-//
-//                return params;
-//            }
-//        };
-//
-//        RequestHandler.getInstance(context).addToRequestQueue(stringRequest);
-//    }
+
+    public static void getShopItems(Context context, RecyclerView recyclerView, String param) {
+        List<Item> items = new ArrayList<>();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_GET_ITEMS,
+                response -> {
+                    try {
+                        System.out.println(response);
+                        JSONArray array = new JSONArray(response);
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object = array.getJSONObject(i);
+
+                            items.add(new Item(
+                                    object.getString("imageUrl"),
+                                    object.getString("name"),
+                                    object.getString("cost")
+                            ));
+                        }
+
+                        recyclerView.setHasFixedSize(true);
+                        recyclerView.setLayoutManager(new GridLayoutManager(context, 2));
+                        recyclerView.setAdapter(new ItemAdapter(context, items));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                },
+                System.out::println)
+        {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("isShop", param);
+
+                return params;
+            }
+        };
+
+        RequestHandler.getInstance(context).addToRequestQueue(stringRequest);
+    }
 }

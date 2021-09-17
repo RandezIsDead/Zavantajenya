@@ -1,19 +1,21 @@
 package com.mr_trying.companion.Adapters;
 
+import android.app.ActivityOptions;
 import android.content.Context;
-import android.content.res.Resources;
-import android.util.DisplayMetrics;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+import com.mr_trying.companion.Activities.SecondaryActivities.BonusActivity;
+import com.mr_trying.companion.Activities.SecondaryActivities.JournalActivity;
+import com.mr_trying.companion.Activities.SecondaryActivities.RestActivity;
+import com.mr_trying.companion.Activities.SecondaryActivities.ShopActivity;
+import com.mr_trying.companion.Activities.SecondaryActivities.TranslationActivity;
 import com.mr_trying.companion.R;
 
 public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHolder> {
@@ -35,7 +37,33 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         if (position == 0) {
-
+            holder.journal.setOnClickListener(v -> {
+                Intent intent = new Intent(context, JournalActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
+            holder.translator.setOnClickListener(v -> {
+                Intent intent = new Intent(context, TranslationActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
+        } else if (position == 1) {
+            holder.shop.setOnClickListener(v -> {
+                Intent intent = new Intent(context, ShopActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
+            holder.rest.setOnClickListener(v -> {
+                Intent intent = new Intent(context, RestActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
+        } else {
+            holder.bonus.setOnClickListener(v -> {
+                Intent intent = new Intent(context, BonusActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
         }
     }
 
