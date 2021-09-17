@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/pipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/journal"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/art"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/pipe"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/translator"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/art"
+        android:layout_toEndOf="@id/journal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/rjd_bonus"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/art"
+        android:layout_below="@+id/translator"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/pricing"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/art"
+        android:layout_below="@+id/rjd_bonus"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/russia_from_window"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/art"
+        android:layout_below="@+id/pricing"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/todo" />
+</RelativeLayout>
