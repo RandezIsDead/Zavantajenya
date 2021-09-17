@@ -12,6 +12,7 @@
         android:layout_centerHorizontal="true"/>
 
     <RelativeLayout
+        android:id="@+id/journal_rel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toStartOf="@id/pipe"
@@ -23,8 +24,11 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:background="#999"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
             android:contentDescription="@string/todo"
-            android:src="@drawable/rzd" />
+            android:src="@drawable/journal_bg"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView6"
@@ -49,6 +53,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/translator_rel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/pipe"
@@ -60,9 +65,12 @@
             android:id="@+id/translator"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:src="@drawable/rzd"
+            android:src="@drawable/translator_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
             android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView7"

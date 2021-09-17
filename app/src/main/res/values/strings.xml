@@ -29,4 +29,6 @@
     <string name="timings">Расписание</string>
     <string name="map">Карта маршрута</string>
     <string name="shop_on_board">Магазин на борту</string>
+    <string name="restoraunt">Ресторан</string>
+    <string name="for_lux">Для Люкс пассажиров</string>
 </resources>
