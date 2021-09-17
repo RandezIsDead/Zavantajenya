@@ -21,8 +21,9 @@
         android:id="@+id/rel_method"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/textView"
         android:layout_centerHorizontal="true">
 
         <androidx.appcompat.widget.AppCompatButton
@@ -46,9 +47,10 @@
     <RelativeLayout
         android:id="@+id/log_by_pass"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:layout_below="@id/rel_method"
-        android:layout_marginTop="20dp"
+        android:layout_above="@id/confirm_auth"
         android:paddingStart="20dp"
         android:paddingEnd="20dp">
 
@@ -61,18 +63,162 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/pass_et"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/textView2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/et_bg"
-            android:ems="10"
             android:hint="@string/_00_00"
+            android:textColor="#6A6A6A"
             android:inputType="text"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColorHint="#777" />
 
+        <RelativeLayout
+            android:id="@+id/log_by_pass_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pass_et"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:id="@+id/pipe"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#FFF" />
+
+            <RelativeLayout
+                android:id="@+id/vagon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/pipe">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vagon"
+                    android:textColor="#6A6A6A"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/vagon_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="@string/_00"
+                    android:inputType="text"
+                    android:textColor="#6A6A6A"
+                    android:textAlignment="center"
+                    android:textColorHint="#777" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/pipe">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place"
+                    android:textColor="#6A6A6A"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/place_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/textView4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="@string/_000"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="#6A6A6A"
+                    android:textColorHint="#777" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/log_by_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/rel_method"
+        android:layout_above="@id/confirm_auth"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ticket_number"
+            android:textColor="#6A6A6A"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ticket_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textView21"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:hint="@string/_00000000000000"
+            android:textColor="#6A6A6A"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColorHint="#777" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/where_to_find"
+            android:layout_below="@id/ticket_et"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#6A6A6A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView223"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wtf"
+            android:layout_below="@id/textView22"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#F12"
+
+            android:textSize="16sp" />
 
     </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/confirm_auth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_confirm_auth"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="@string/confirm"
+        android:textColor="#000"/>
+
 </RelativeLayout>

@@ -8,8 +8,9 @@
         <entry key="app/src/main/res/drawable/auth_method_button_left_white.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/auth_method_button_right_red.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/auth_method_button_right_white.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/button_confirm_auth.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/et_bg.xml" value="0.2140625" />
-        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.296875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.340625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/app_icon.xml" value="0.2140625" />
