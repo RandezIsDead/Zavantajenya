@@ -27,7 +27,6 @@ public class DbHelper {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_GET_ITEMS,
                 response -> {
                     try {
-                        System.out.println(response);
                         JSONArray array = new JSONArray(response);
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
@@ -41,7 +40,7 @@ public class DbHelper {
 
                         recyclerView.setHasFixedSize(true);
                         recyclerView.setLayoutManager(new GridLayoutManager(context, 2));
-                        recyclerView.setAdapter(new ItemAdapter(context, items));
+                        recyclerView.setAdapter(new ItemAdapter(context, items, false));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

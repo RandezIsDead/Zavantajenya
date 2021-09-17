@@ -10,9 +10,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.mr_trying.companion.Activities.SecondaryActivities.BasketActivity;
+import com.google.android.material.snackbar.Snackbar;
+import com.mr_trying.companion.Activities.SecondaryActivities.CartActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.FeedbackActivity;
 import com.mr_trying.companion.Adapters.MainMenuAdapter;
+import com.mr_trying.companion.Data.Prefs;
 import com.mr_trying.companion.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,13 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
         basket.setOnClickListener(v -> {
             moreRel.setVisibility(View.GONE);
-            startActivity(new Intent(getApplicationContext(), BasketActivity.class));
+            startActivity(new Intent(getApplicationContext(), CartActivity.class));
             overridePendingTransition(0, 0);
         });
         toVip.setOnClickListener(v -> {
             moreRel.setVisibility(View.GONE);
-            startActivity(new Intent(getApplicationContext(), LuxActivity.class));
-            overridePendingTransition(0, 0);
+            if (Prefs.read(getApplicationContext(), "luxStatus").equals("1")) {
+                startActivity(new Intent(getApplicationContext(), LuxActivity.class));
+                overridePendingTransition(0, 0);
+            } else
+                Snackbar.make(v, "Вы не пассажир класса Люкс", Snackbar.LENGTH_LONG).show();
         });
         feedback.setOnClickListener(v -> {
             moreRel.setVisibility(View.GONE);

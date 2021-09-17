@@ -18,6 +18,7 @@ import com.mr_trying.companion.Data.Prefs;
 import com.mr_trying.companion.Data.RequestHandler;
 import com.mr_trying.companion.R;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -83,12 +84,46 @@ public class AuthActivity extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_LOGIN,
                 response -> {
                     if (response.equals("allowed")) {
-                        Prefs.write(getApplicationContext(), "loggedIn", "true");
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        overridePendingTransition(0, 0);
-                        Snackbar.make(v, "Добро пожаловать", Snackbar.LENGTH_SHORT).show();
+                        getLuxStatus(v, pass, vagon, seat, ticket);
                     } else {
                         Snackbar.make(v, "Данные введены некорректно", Snackbar.LENGTH_SHORT).show();
+                    }
+                },
+                System.out::println)
+        {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("pass", pass);
+                params.put("vagon", vagon);
+                params.put("seat", seat);
+                params.put("ticket", ticket);
+
+                return params;
+            }
+        };
+
+        RequestHandler.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
+    }
+
+    private void getLuxStatus(View v, String pass, String vagon, String seat, String ticket) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_GET_USER_STATUS,
+                response -> {
+                    try {
+                        System.out.println(response);
+                        JSONArray array = new JSONArray(response);
+
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object = array.getJSONObject(i);
+
+                            Prefs.write(getApplicationContext(), "luxStatus", object.getString("lux"));
+                            Prefs.write(getApplicationContext(), "loggedIn", "true");
+                            Snackbar.make(v, "Добро пожаловать", Snackbar.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            overridePendingTransition(0, 0);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                 },
                 System.out::println)

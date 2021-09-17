@@ -44,8 +44,8 @@ public class TranslationActivity extends AppCompatActivity {
 
                 }
             });
-            translate.execute(text1.getText().toString().trim(), lang1.getText().toString().equals("English") ? "en" : "ru",
-                    lang2.getText().toString().equals("English") ? "en" : "ru");
+            translate.execute(text1.getText().toString().trim(), lang1.getText().toString().equals(getResources().getString(R.string.english)) ? "en" : "ru",
+                    lang2.getText().toString().equals(getResources().getString(R.string.english)) ? "en" : "ru");
         });
         swap.setOnClickListener(v -> {
             String l1 = lang1.getText().toString();

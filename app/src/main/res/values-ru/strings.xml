@@ -33,7 +33,8 @@
     <string name="restoraunt">Ресторан</string>
     <string name="for_lux">Для Люкс пассажиров</string>
     <string name="cart">Корзина</string>
-    <string name="english">English</string>
-    <string name="russian">Russian</string>
-    <string name="translate">Translate</string>
+    <string name="english">Английский</string>
+    <string name="russian">Русский</string>
+    <string name="translate">Перевести</string>
+    <string name="add_to_cart">Add to cart</string>
 </resources>

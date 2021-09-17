@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mr_trying.companion.Activities.SecondaryActivities.BonusActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.JournalActivity;
+import com.mr_trying.companion.Activities.SecondaryActivities.MapActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.RestActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.ShopActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.TranslationActivity;
@@ -58,8 +59,23 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
             });
+            holder.map.setOnClickListener(v -> {
+                Intent intent = new Intent(context, MapActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
+            holder.timing.setOnClickListener(v -> {
+                Intent intent = new Intent(context, RestActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
         } else {
             holder.bonus.setOnClickListener(v -> {
+                Intent intent = new Intent(context, BonusActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
+            });
+            holder.fromWindow.setOnClickListener(v -> {
                 Intent intent = new Intent(context, BonusActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
