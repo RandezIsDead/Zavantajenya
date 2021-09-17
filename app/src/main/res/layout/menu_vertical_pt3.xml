@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/p1"
+        android:id="@+id/timings_rel"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_marginStart="10dp"
@@ -42,10 +42,10 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/p2"
+        android:id="@+id/map_rel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/p1"
+        android:layout_below="@+id/timings_rel"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp">
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_marginStart="10dp"
-        android:layout_below="@id/p2"
+        android:layout_below="@id/map_rel"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp">
 
@@ -102,7 +102,7 @@
             android:id="@+id/imageView31"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            tools:srcCompat="@tools:sample/avatars"
+            android:src="@drawable/church"
             android:layout_above="@id/textView72"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/todo" />

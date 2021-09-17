@@ -11,14 +11,17 @@
         android:layout_centerHorizontal="true"/>
 
     <RelativeLayout
+        android:id="@+id/audiobook_rel"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_toStartOf="@id/pipe"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="5dp">
+        android:layout_marginEnd="5dp"
+        tools:ignore="RelativeOverlap">
 
         <ImageView
-            android:id="@+id/journal"
+            android:id="@+id/audiobook"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:src="@drawable/audio_bg"
@@ -50,15 +53,17 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/cinema_rel"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_toEndOf="@id/pipe"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         tools:ignore="RelativeOverlap">
 
         <ImageView
-            android:id="@+id/translator"
+            android:id="@+id/cinema"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:src="@drawable/cinema_bg"
@@ -85,6 +90,134 @@
             android:layout_height="50dp"
             android:src="@drawable/video"
             android:layout_above="@id/textView7"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/todo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/books_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/cinema_rel"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/books"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/books_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
+            android:background="#999"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/textView72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/books" />
+
+        <ImageView
+            android:id="@+id/imageView31"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/openBook"
+            android:layout_above="@id/textView72"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/todo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/music_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_toStartOf="@id/pipe"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/books_rel">
+
+        <ImageView
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/music_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/music"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView35"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/headphones"
+            android:layout_above="@id/textView63"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/todo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/net_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_toEndOf="@id/pipe"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/books_rel"
+        tools:ignore="RelativeOverlap">
+
+        <ImageView
+            android:id="@+id/net"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/net_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
+            android:background="#999"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/textView75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/net"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView41"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/globe"
+            android:layout_above="@id/textView75"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/todo" />
 

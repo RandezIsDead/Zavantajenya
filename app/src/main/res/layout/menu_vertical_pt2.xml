@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/p1"
+        android:id="@+id/timings_rel"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_marginStart="10dp"
@@ -12,12 +13,15 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:id="@+id/rjd_bonus"
+            android:id="@+id/timings"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:src="@drawable/rzd"
+            android:src="@drawable/raspisanie_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
             android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView7"
@@ -28,64 +32,130 @@
             android:layout_marginStart="5dp"
             android:layout_marginBottom="10dp"
             android:layout_alignParentBottom="true"
-            android:text="@string/bon" />
+            android:text="@string/timings" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_sun_24"
             android:layout_above="@id/textView7"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/calendar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/map_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/timings_rel"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/map"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/map_bg"
+            android:scaleType="centerCrop"
+            android:tint="#6F000000"
+            android:background="#999"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/textView71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/map"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView311"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/map"
+            android:layout_above="@id/textView71"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/todo" />
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/p2"
+        android:id="@+id/pipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/p1"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/shop_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginStart="10dp"
+        android:layout_below="@id/map_rel"
+        android:layout_toStartOf="@id/pipe"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:id="@+id/pricing"
+            android:id="@+id/shop"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:src="@drawable/rzd"
+            android:src="@drawable/shop_bg"
+            android:tint="#6F000000"
+            android:scaleType="centerCrop"
             android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
-            android:id="@+id/textView71"
+            android:id="@+id/textView74"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFF"
             android:textSize="20sp"
-            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginStart="5dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/banc" />
+            android:text="@string/shop_on_board" />
+
+        <ImageView
+            android:id="@+id/imageView34"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/shoppingCart"
+            android:layout_above="@id/textView74"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/todo" />
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rest_rel"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_marginStart="10dp"
-        android:layout_below="@id/p2"
+        android:layout_below="@id/map_rel"
+        android:layout_toEndOf="@id/pipe"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:id="@+id/russia_from_window"
+            android:id="@+id/rest"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:src="@drawable/rzd"
+            android:src="@drawable/rest"
+            android:tint="#6F000000"
+            android:scaleType="centerCrop"
             android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView72"
@@ -96,13 +166,13 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="5dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/rfw" />
+            android:text="@string/shop_on_board" />
 
         <ImageView
             android:id="@+id/imageView31"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            tools:srcCompat="@tools:sample/avatars"
+            android:src="@drawable/dish"
             android:layout_above="@id/textView72"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/todo" />

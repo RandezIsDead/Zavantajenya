@@ -23,4 +23,10 @@
     <string name="feedback">Обратная связь</string>
     <string name="audiobooks">Аудиокниги</string>
     <string name="cinema">Кинотеатр</string>
+    <string name="books">Книги</string>
+    <string name="music">Музыка</string>
+    <string name="net">Интернет</string>
+    <string name="timings">Расписание</string>
+    <string name="map">Карта маршрута</string>
+    <string name="shop_on_board">Магазин на борту</string>
 </resources>
