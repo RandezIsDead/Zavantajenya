@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Попутчик</string>
+    <string name="todo">TODO</string>
+    <string name="av_auth_method">Доступный способ авторизации</string>
+    <string name="by_pass">По пасспорту</string>
+    <string name="by_ticket">По билету</string>
+</resources>

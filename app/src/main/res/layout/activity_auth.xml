@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/av_auth_method"
+        android:textAlignment="center"
+        android:textColor="#222"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rel_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/by_pass"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/auth_method_button_left_red"
+            android:text="@string/by_pass" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/by_ticket"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@id/by_pass"
+            android:background="@drawable/auth_method_button_right_white"
+            android:text="@string/by_ticket" />
+
+    </RelativeLayout>
+</RelativeLayout>
