@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.KeyEvent;
+import android.widget.ImageView;
 
 import com.mr_trying.companion.R;
 
@@ -23,10 +25,16 @@ public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+
+        ImageView close = findViewById(R.id.close);
+        close.setOnClickListener(v -> {
+            finish();
+            overridePendingTransition(0, 0);
+        });
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         MapView map = (MapView) findViewById(R.id.map);
 
@@ -61,5 +69,15 @@ public class MapActivity extends AppCompatActivity {
         Polyline roadOverlay = RoadManager.buildRoadOverlay(road);
         map.getOverlays().add(roadOverlay);
         map.invalidate();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finish();
+            overridePendingTransition(0, 0);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

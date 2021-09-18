@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/pipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
 
     <RelativeLayout
         android:id="@+id/bonus_rel"
@@ -16,9 +23,11 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:background="#999"
+            android:tint="#6F000000"
             android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
             android:src="@drawable/bonus_bg"
-            android:scaleType="centerCrop"/>
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView7"
@@ -58,7 +67,9 @@
             android:src="@drawable/bank_bg"
             android:scaleType="centerCrop"
             android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:tint="#6F000000"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView71"
@@ -81,6 +92,7 @@
         android:layout_below="@id/bank_rel"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
+        android:layout_toStartOf="@id/pipe"
         android:layout_marginBottom="10dp">
 
         <ImageView
@@ -90,7 +102,9 @@
             android:src="@drawable/rfw_bg"
             android:scaleType="centerCrop"
             android:background="#999"
-            android:contentDescription="@string/todo" />
+            android:tint="#6F000000"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
 
         <TextView
             android:id="@+id/textView72"
@@ -109,6 +123,50 @@
             android:layout_height="50dp"
             android:src="@drawable/church"
             android:layout_above="@id/textView72"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/todo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/news_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/bank_rel"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/pipe"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/news"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/news_bg"
+            android:scaleType="centerCrop"
+            android:background="#999"
+            android:tint="#6F000000"
+            android:contentDescription="@string/todo"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/textView77"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/news" />
+
+        <ImageView
+            android:id="@+id/imageView33"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/newspaper"
+            android:layout_above="@id/textView77"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/todo" />
 

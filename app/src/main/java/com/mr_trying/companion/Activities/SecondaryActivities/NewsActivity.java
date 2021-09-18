@@ -5,17 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.mr_trying.companion.R;
 
-public class BonusActivity extends AppCompatActivity {
+public class NewsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coming_soon);
-        Toast.makeText(getApplicationContext(), "Under Construction", Toast.LENGTH_LONG).show();
 
         ImageView close = findViewById(R.id.close);
         close.setOnClickListener(v -> {

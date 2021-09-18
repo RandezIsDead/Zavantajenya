@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/et_bg">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/remove_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_message"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/cancel"
+        android:textColor="#F00" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/edit_message"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#134" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edit_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:background="@null"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/confirm"
+        android:textColor="#00F" />
+
+</RelativeLayout>

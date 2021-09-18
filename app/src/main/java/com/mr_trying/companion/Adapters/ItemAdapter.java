@@ -1,9 +1,13 @@
 package com.mr_trying.companion.Adapters;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.snackbar.Snackbar;
 import com.mr_trying.companion.Data.Prefs;
 import com.mr_trying.companion.Models.Item;
 import com.mr_trying.companion.R;
@@ -51,7 +56,40 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             List<Item> itemsList = Prefs.getItems(context);
             itemsList.add(item);
             Prefs.saveItems(context, itemsList);
+            Snackbar.make(v, "Товар добавлен в корзину", Snackbar.LENGTH_SHORT).show();
         });
+
+        if (isCart) {
+            holder.itemView.setOnLongClickListener(v -> {
+                Dialog dialogWindow = new Dialog(v.getRootView().getContext());
+
+                dialogWindow.setContentView(R.layout.alert_two_elements);
+                dialogWindow.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+                Button conf = dialogWindow.findViewById(R.id.edit_message);
+                Button cancel = dialogWindow.findViewById(R.id.remove_message);
+                conf.setText("Удалить этот товар из корзины");
+
+                dialogWindow.show();
+
+                conf.setOnClickListener(v1 -> {
+                    List<Item> itemsList = Prefs.getItems(context);
+                    for (int i = 0; i < itemsList.size(); i++) {
+                        if (itemsList.get(i).getName().equals(item.getName()) &&
+                        itemsList.get(i).getImageUrl().equals(item.getImageUrl())) {
+                            itemsList.remove(i);
+                            break;
+                        }
+                    }
+                    Prefs.saveItems(context, itemsList);
+                    Snackbar.make(v, "Товар удалён", Snackbar.LENGTH_SHORT).show();
+                    dialogWindow.dismiss();
+                });
+
+                cancel.setOnClickListener(v1 -> dialogWindow.dismiss());
+                return true;
+            });
+        }
     }
 
     @Override

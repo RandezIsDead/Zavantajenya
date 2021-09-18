@@ -36,5 +36,10 @@
     <string name="english">Английский</string>
     <string name="russian">Русский</string>
     <string name="translate">Перевести</string>
-    <string name="add_to_cart">Add to cart</string>
+    <string name="add_to_cart">Добавить в корзину</string>
+    <string name="finish_shopping">Заказать</string>
+    <string name="clear_cart">Очистить корзину</string>
+    <string name="coming_soon">В разработке</string>
+    <string name="cancel">Отмена</string>
+    <string name="news">Новости</string>
 </resources>

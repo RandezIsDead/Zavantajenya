@@ -4,10 +4,11 @@
     package="com.mr_trying.companion">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"  />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +17,15 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Companion">
+        <activity
+            android:name=".Activities.SecondaryActivities.SightseeingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.SecondaryActivities.NewsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.SecondaryActivities.CinemaActivity"
+            android:exported="true" />
         <activity
             android:name=".Activities.SecondaryActivities.MapActivity"
             android:exported="true" />

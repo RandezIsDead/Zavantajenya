@@ -9,7 +9,9 @@
         <entry key="app/src/main/res/drawable/auth_method_button_right_red.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/auth_method_button_right_white.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/button_confirm_auth.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/button_red.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/drawable/et_bg.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/good_item_bg.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/ic_baseline_repeat_24.xml" value="0.2140625" />
@@ -17,6 +19,7 @@
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.296875" />
         <entry key="app/src/main/res/layout/activity_basket.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_cart.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_coming_soon.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_feedback.xml" value="0.340625" />
         <entry key="app/src/main/res/layout/activity_journal.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_lux.xml" value="0.35572916666666665" />
@@ -27,6 +30,7 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.340625" />
         <entry key="app/src/main/res/layout/activity_translation.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_web.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/alert_two_elements.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/goods_item.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/menu_lux.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/menu_vertical_pt1.xml" value="0.5" />
