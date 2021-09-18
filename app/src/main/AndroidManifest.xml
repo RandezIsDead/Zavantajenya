@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Companion">
         <activity
+            android:name=".Activities.SecondaryActivities.ScheduleActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activities.SecondaryActivities.SightseeingActivity"
             android:exported="true" />
         <activity

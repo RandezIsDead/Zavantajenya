@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/ew"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:background="#000"/>
+
+    <RelativeLayout
+        android:id="@+id/top_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ew"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/flight_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/pipe1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/flight_number"
+            android:layout_marginStart="10dp"
+            android:text="@string/pipe"
+            android:layout_centerVertical="true"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/from_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pipe1"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/pipe2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/from_station"
+            android:layout_marginStart="10dp"
+            android:text="@string/pipe"
+            android:layout_centerVertical="true"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/to_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pipe2"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/pipe3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/to_station"
+            android:layout_marginStart="10dp"
+            android:text="@string/pipe"
+            android:layout_centerVertical="true"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/sending_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pipe3"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/pipe4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/sending_time"
+            android:layout_marginStart="10dp"
+            android:text="@string/pipe"
+            android:layout_centerVertical="true"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/arrival_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pipe4"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/top_rel"
+        android:background="#000"/>
+
+</RelativeLayout>

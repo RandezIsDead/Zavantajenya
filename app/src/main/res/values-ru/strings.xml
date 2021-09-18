@@ -42,4 +42,5 @@
     <string name="coming_soon">В разработке</string>
     <string name="cancel">Отмена</string>
     <string name="news">Новости</string>
+    <string name="pipe">|</string>
 </resources>

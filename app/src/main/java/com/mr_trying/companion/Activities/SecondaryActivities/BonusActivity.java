@@ -15,7 +15,6 @@ public class BonusActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coming_soon);
-        Toast.makeText(getApplicationContext(), "Under Construction", Toast.LENGTH_LONG).show();
 
         ImageView close = findViewById(R.id.close);
         close.setOnClickListener(v -> {

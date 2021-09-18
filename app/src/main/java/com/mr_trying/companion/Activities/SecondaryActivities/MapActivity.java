@@ -7,6 +7,7 @@ import android.os.StrictMode;
 import android.view.KeyEvent;
 import android.widget.ImageView;
 
+import com.mr_trying.companion.Data.Prefs;
 import com.mr_trying.companion.R;
 
 import org.osmdroid.api.IMapController;
@@ -43,8 +44,8 @@ public class MapActivity extends AppCompatActivity {
         map.setUseDataConnection(true);
         map.setTileSource(TileSourceFactory.OpenTopo  );
 
-        GeoPoint startPoint = new GeoPoint(48.13, -1.63);
-        GeoPoint endPoint = new GeoPoint(48.4, -1.9);
+        GeoPoint startPoint = new GeoPoint(Float.parseFloat(Prefs.read(getApplicationContext(), "st")), Float.parseFloat(Prefs.read(getApplicationContext(), "sg")));
+        GeoPoint endPoint = new GeoPoint(Float.parseFloat(Prefs.read(getApplicationContext(), "et")), Float.parseFloat(Prefs.read(getApplicationContext(), "eg")));
 
         IMapController mapController = map.getController();
         mapController.setZoom(9);

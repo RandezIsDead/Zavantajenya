@@ -15,6 +15,7 @@ import com.mr_trying.companion.Activities.SecondaryActivities.BonusActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.JournalActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.MapActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.RestActivity;
+import com.mr_trying.companion.Activities.SecondaryActivities.ScheduleActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.ShopActivity;
 import com.mr_trying.companion.Activities.SecondaryActivities.TranslationActivity;
 import com.mr_trying.companion.R;
@@ -65,7 +66,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
                 context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
             });
             holder.timing.setOnClickListener(v -> {
-                Intent intent = new Intent(context, RestActivity.class);
+                Intent intent = new Intent(context, ScheduleActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent, ActivityOptions.makeCustomAnimation(context, 0, 0).toBundle());
             });

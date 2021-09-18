@@ -63,11 +63,11 @@
 
         <RelativeLayout
             android:id="@+id/r1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp">
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
             <ImageView
                 android:id="@+id/imageView5f"
@@ -89,11 +89,11 @@
 
         <RelativeLayout
             android:id="@+id/r2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:layout_below="@id/r1">
 
             <ImageView
@@ -116,12 +116,12 @@
 
         <RelativeLayout
             android:id="@+id/r3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/r2"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp">
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
             <ImageView
                 android:id="@+id/imageView51"

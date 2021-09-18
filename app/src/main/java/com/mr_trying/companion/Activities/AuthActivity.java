@@ -116,7 +116,10 @@ public class AuthActivity extends AppCompatActivity {
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
 
+                            Prefs.write(getApplicationContext(), "flightNum", object.getString("flightNum"));
                             Prefs.write(getApplicationContext(), "luxStatus", object.getString("lux"));
+                            Prefs.write(getApplicationContext(), "vagon", object.getString("vagon"));
+                            Prefs.write(getApplicationContext(), "seat", object.getString("seat"));
                             Prefs.write(getApplicationContext(), "loggedIn", "true");
                             Snackbar.make(v, "Добро пожаловать", Snackbar.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));

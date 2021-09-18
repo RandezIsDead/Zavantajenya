@@ -13,7 +13,7 @@ public class FeedbackActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
+        setContentView(R.layout.activity_rec_view);
 
         ImageView close = findViewById(R.id.close);
         close.setOnClickListener(v -> {
