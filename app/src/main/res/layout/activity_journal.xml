@@ -25,8 +25,8 @@
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@id/imageView2"
             android:text="@string/app_name"
-            android:textSize="18sp"
             android:textColor="#444"
+            android:textSize="18sp"
             android:textStyle="bold|italic" />
 
         <ImageView
@@ -35,8 +35,8 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_baseline_arrow_back_24" />
 
@@ -44,7 +44,92 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/imageView2"
-            android:background="#999"/>
+            android:background="#999" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/top_bar"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/flight_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/car_number"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/seat_number"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/from_station"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/to_station"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/arrival_time"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/sending_time"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/passenger_status"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#444"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>
